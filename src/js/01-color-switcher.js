@@ -13,20 +13,14 @@ let idInterval = null;
 refs.btnStart.addEventListener('click', onColorChangeStart);
 refs.btnStop.addEventListener('click', onColorChangeStop);
 
-// refs.btnStop.setAttribute('disabled', '');
-
 function onColorChangeStart(evt) {
   onBtnDisabled();
-  // evt.target.setAttribute('disabled', '');
-  // refs.btnStop.removeAttribute('disabled');
   idInterval = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 }
 
 function onColorChangeStop(evt) {
-  // evt.target.setAttribute('disabled', '');
-  // refs.btnStart.removeAttribute('disabled');
   onBtnDisabled();
   clearInterval(idInterval);
 }

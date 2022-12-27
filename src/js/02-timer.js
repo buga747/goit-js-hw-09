@@ -23,7 +23,7 @@ const refs = {
   seconds: document.querySelector('span[data-seconds]'),
 };
 
-refs.startBtn.disabled = true;
+refs.startBtn.setAttribute('disabled', 'true');
 
 const options = {
   enableTime: true,
@@ -81,5 +81,5 @@ function convertMs(ms) {
 }
 
 function addLeadingZero(value) {
-  return String(value).padStart();
+  return String(value).padStart(2, 0);
 }
